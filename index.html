@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>My Docs</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "BaBee: Agilicious Documentation for Autonomous Flying";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">BaBee: Agilicious Documentation for Autonomous Flying</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-components-list">1. Components List</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-firmware-list">2. Firmware List</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-mechanical-assembly">3. Mechanical Assembly</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-flight-controller-fc-electronic-assembly">4. Flight Controller (FC) Electronic Assembly</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-optional-betaflight-software-general-tutorials">5. (Optional) Betaflight Software General Tutorials</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-flashing-jetson-xavier-nx">6. Flashing Jetson Xavier NX</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-optional-betaflight-software-for-remote-control">7. (Optional) Betaflight Software for Remote Control</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-hardware-connections">8. Hardware Connections</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-betaflight-software-for-autonomous-flight">9. Betaflight Software for Autonomous Flight</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-flashing-tutorial-link">a. Flashing (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-calibration">b. Calibration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#c-ports-tutorial-link">c. Ports (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#d-configuration-tutorial-link">d. Configuration (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#e-powerbattery-tutorial-link">e. Power&amp;Battery (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#f-receiver-tutorial-link">f. Receiver (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#g-modes-tutorial-link">g. Modes (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#h-motors-tutorial-link">h. Motors (Tutorial - Link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#i-cli-tab">i. CLI Tab</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10mocap-setup">10.Mocap Setup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#11-agilicious-installation">11. Agilicious Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12demonstration">12.Demonstration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-agilicious-codebase-configuration">1. Agilicious codebase configuration:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-setup-before-launching">2. Setup before Launching:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-launching">3. Launching:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">BaBee: Agilicious Documentation for Autonomous Flying</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="babee-agilicious-documentation-for-autonomous-flying">BaBee: Agilicious Documentation for Autonomous Flying</h1>
+<h2 id="1-components-list">1. Components List</h2>
+<!-- - Main Compute Unit: Nvidia Jetson Xavier NX 16 GB Module
+- Breakout board: A203 Carrier board for Jetson Nano/Xavier NX V2
+- Flight Controller: SpeedyBee F7 V3 FC
+- Electronic Speed Controller: SpeedyBee BL32 50A 4-in-1 ESC
+- Radio Receiver: FS-X6B
+- Radio Transmitter: FS-16X
+- Main Plate: FPV Freestyle w/5mm arms Frame
+- Motors: TMotor F40 PRO V Motor
+- Propellers: TMotor T5147 POPO Racing Tri-Blade Propellers
+- Battery: Tattu R-Line 3.0 2000mAh 14.8V 120C 4S1P Lipo Battery Pack -->
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main Compute Unit</td>
+<td>Nvidia Jetson Xavier NX 16 GB Module</td>
+</tr>
+<tr>
+<td>Breakout board</td>
+<td>A203 Carrier board for Jetson Nano/Xavier NX V2</td>
+</tr>
+<tr>
+<td>Flight Controller</td>
+<td>SpeedyBee F7 V3 FC</td>
+</tr>
+<tr>
+<td>Electronic Speed Controller</td>
+<td>SpeedyBee BL32 50A 4-in-1 ESC</td>
+</tr>
+<tr>
+<td>Radio Receiver</td>
+<td>FS-X6B</td>
+</tr>
+<tr>
+<td>Radio Transmitter</td>
+<td>FS-16X</td>
+</tr>
+<tr>
+<td>Main Plate</td>
+<td>FPV Freestyle w/5mm arms Frame</td>
+</tr>
+<tr>
+<td>Motors</td>
+<td>TMotor F40 PRO V Motor</td>
+</tr>
+<tr>
+<td>Propellers</td>
+<td>TMotor T5147 POPO Racing Tri-Blade Propellers</td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>Tattu R-Line 3.0 2000mAh 14.8V 120C 4S1P Lipo Battery Pack</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-firmware-list">2. Firmware List</h2>
+<p>To follow our recommended process, you will need the following firmware:</p>
+<ul>
+<li>A Base Computer running Ubuntu 20.04, with installed:<ul>
+<li>Motive (Mocap software)</li>
+<li>Betaflight (FC software - we recommend using a stable release)</li>
+<li>ROS</li>
+</ul>
+</li>
+<li>A Babee Computer running Ubuntu 20.04, with installed:<ul>
+<li>ROS</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-mechanical-assembly">3. Mechanical Assembly</h2>
+<p>The mechanical assembly of the quadrotor’s frame (SpeedyBee Frame V2) can be done following this tutorial: <a href="https://youtu.be/hWUoH5cyySo?si=n4RCJ04sYB27ETVS">Tutorial Link</a>.</p>
+<h2 id="4-flight-controller-fc-electronic-assembly">4. Flight Controller (FC) Electronic Assembly</h2>
+<p>The electronic assembly of the flight controller (SV-F7V3-BL32-50A) can be done following the tutorials below:</p>
+<ul>
+<li><a href="https://youtu.be/VfNlDSZoTvc?si=3v8P6FFKEZn0rWTS">Tutorial 1</a></li>
+<li><a href="https://youtu.be/lw5rZoBxtzk?si=9PThKLTMh40VmC07">Tutorial 2</a></li>
+<li><a href="https://youtu.be/UVIMAifJjvE?si=jcgfB9_tG2y0-G_0">Tutorial 3</a></li>
+</ul>
+<h2 id="5-optional-betaflight-software-general-tutorials">5. (Optional) Betaflight Software General Tutorials</h2>
+<p>For those unused to Betaflight, we recommend watching the following playlist/series of videos, which explain in detail every aspect of the software and its configurations: <a href="https://youtube.com/playlist?list=PLwoDb7WF6c8nT4jjsE4VENEmwu9x8zDiE&amp;si=eUgScTlpqcQ8FIik">Tutorial Playlist</a>.</p>
+<h2 id="6-flashing-jetson-xavier-nx">6. Flashing Jetson Xavier NX</h2>
+<p>In order to flash Jetson Xavier NX on an A203 Carrier Board, you may want to follow the official instructions from the following link: <a href="https://wiki.seeedstudio.com/reComputer_A203_Flash_System/#flashing-jetpack-os-via-command-line">Flashing Instructions</a>.
+Note: We highly recommend not to flash using Nvidia’s SDK Manager. Instead, we suggest using the command line installation steps from the above link.
+Jetson Linux Version: “35.5.0 &gt;”
+JetPack version: “5.0.2”</p>
+<h2 id="7-optional-betaflight-software-for-remote-control">7. (Optional) Betaflight Software for Remote Control</h2>
+<ul>
+<li>Reminder that we use the Remote Controller FS-I6X Transmitter, and Receiver FS-X6B, where the below schematic applies:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Remote Controller</th>
+<th>Flight Controller</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GND</td>
+<td>G</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>4V5</td>
+</tr>
+<tr>
+<td>PPM</td>
+<td>R2</td>
+</tr>
+</tbody>
+</table>
+<p>Note that while PPM is working fine, iBUS is not recommended.</p>
+<ul>
+<li>
+<p>The RC needs to be configured separately to unable arming on RC’s end. For that, you can follow: <a href="https://www.youtube.com/watch?v=lyqV5KMwK4I">Tutorial</a>.</p>
+</li>
+<li>
+<p>Then, you must allow for communication between RC and FC. To do so, setup Betaflight’s receiver configuration as in the below image:</p>
+</li>
+<li>
+<p>Finally, you may want to set up the Angle and Horizon mode under the Modes tab of Betaflight.</p>
+</li>
+</ul>
+<h2 id="8-hardware-connections">8. Hardware Connections</h2>
+<ul>
+<li>
+<p>SBUS has been used to connect FC (flight controller) and SBC (single board computer). Two distinct RX-TX pairs will be required on FC and SBC (you must not use the same X for RX/TX pairs).</p>
+</li>
+<li>
+<p>Solder the FC R2 and connect it to SBC USB-to-TTL cable on RX (note that the USB-to-TTL cable inverts RX and TX, therefore we connect R2 to USB_RX).</p>
+</li>
+<li>
+<p>Solder the FC T3 and connect it to SBC GPIO RX (UART_1; Pin 10, W8).</p>
+</li>
+<li>
+<p>Connect FC GND to SBC GPIO GND (Pin 6, W8).</p>
+</li>
+</ul>
+<h2 id="9-betaflight-software-for-autonomous-flight">9. Betaflight Software for Autonomous Flight</h2>
+<h3 id="a-flashing-tutorial-link">a. Flashing (Tutorial - <a href="https://youtu.be/LkBWRiEGKTI?si=Y_OdhbqLRy0kyudE">Link</a>)</h3>
+<ul>
+<li>Go to “Firmware Flasher”</li>
+<li>Press “Auto Detect” to choose your flight controller. If it does not auto-detect, DO NOT FLASH and do research to find out what the correct target is.</li>
+<li>We recommend flashing on firmware 4.3.0.</li>
+<li>First, click “save backup”. The FC comes with some customization on it. If in the future, all the data is erased, your FC will go to default settings, which is not what we want.</li>
+<li>Load firmware online</li>
+<li>Flash Firmware</li>
+<li>Now on the top right, the menu should change to DFU mode. If it does not appear automatically, watch the video above.</li>
+<li>After flashing, press connect on the top right.</li>
+<li>Press “Apply Custom Defaults”</li>
+<li>Press “Connect “ again</li>
+<li>Betaflight might give some warnings now. Just follow the steps given.</li>
+</ul>
+<p>NOTE: NEVER click “Reset settings” button in the “Setup” tab. This will reset the manufacturer’s customization. This is not what you may want.</p>
+<h3 id="b-calibration">b. Calibration</h3>
+<ul>
+<li>In the Setup tab of Betaflight, click ‘Calibrate Accelerometer’ and follow the given instructions.</li>
+</ul>
+<h3 id="c-ports-tutorial-link">c. Ports (Tutorial - <a href="https://youtu.be/UDksru4JWnE?si=eHp38Ue3zo30OkMd">Link</a>)</h3>
+<p>Note that in each row, you can toggle at most one of the available settings (Configuration/MSP; Serial RX, Telemetry Output; Sensor Input; Peripherals). We set the following:</p>
+<p>i. USB VCP is by default set to MSP and should never be touched unless you know what you are doing. This would disable access to FC from USB-C connection and may require resetting the FC completely.</p>
+<p>ii. UART2’s Serial RX to ON as R2 is used on the FC as a serial receiver.</p>
+<p>iii. UART3’s Telemetry Output to MAVLink (communication protocol used by Mavros) with baud rate as 115200.</p>
+<p>iv. UART4’s Sensor Input to ESC to allow communication from FC to ESC.</p>
+<h3 id="d-configuration-tutorial-link">d. Configuration (Tutorial - <a href="https://youtu.be/eY_H6qtpU18?si=YzRFTZ9OLYa4ZBWl">Link</a>)</h3>
+<p>Our configuration tab is left (nearly) as default. A few minor changes have been done, such as the following:</p>
+<p>i. RX_LOST in Dshot Beacon Configuration may be set to ON/OFF based on your preference. Enabling this will enable a beeping sound when your FC does not receive any signal from a controller while armed. We have disabled this setting for convenience during testing.</p>
+<p>ii. Beacon Tone simply indicates which beeping sound you wish to use and is not important.</p>
+<h3 id="e-powerbattery-tutorial-link">e. Power&amp;Battery (Tutorial - <a href="https://youtu.be/Je6eFQKbPBw?si=ZXjQsn5YEWhgAprC">Link</a>)</h3>
+<p>All parameters are left as default here. (Should we calibrate the battery? forgot)</p>
+<h3 id="f-receiver-tutorial-link">f. Receiver (Tutorial - <a href="https://youtu.be/vEDdk5w6YS4?si=6Z9CoixKklVePBiz">Link</a>)</h3>
+<p>Note that values in the Preview (left) tab might be different from one configuration to another. However, you must set the following:</p>
+<p>i. Receiver Mode is set to Serial (via UART) to allow serial communication via UARTs.</p>
+<p>ii. Serial Receiver Provider is set to SBUS as Agilicious uses SBUS to communicate.</p>
+<p>iii. Telemetry should be set ON to allow telemetry transmission from FC.</p>
+<p>iv. Channel Map is set to TAER1234 as required by Agilicious.</p>
+<h3 id="g-modes-tutorial-link">g. Modes (Tutorial - <a href="https://youtu.be/kDAotpevszs?si=w6etbI4qXF82e5Yy">Link</a>)</h3>
+<p>i. We bind ARMing to AUX1 and set the enabling range from 1700 to 2100. This will allow Agilicious to arm the quadrotor. When first launching autonomous flying from Agilicious, you will observe AUX1 going to 1000 (unarmed). Then, when clicking ‘Arm’ in the software, the value will rise to 2000 and rotors will start spinning (armed).</p>
+<p>ii. Other modes can be configured here such as flying modes, beep signals…</p>
+<h3 id="h-motors-tutorial-link">h. Motors (Tutorial - <a href="https://youtu.be/1WYDsiYJGoQ?si=QNzsBX40A-W6r9j-">Link</a>)</h3>
+<p>i. We recommend leaving ESC_SENSOR ON, although this may not affect autonomous flying.</p>
+<p>ii. We set Bidirectional DShot to ON to allow bidirectional communication between the FC and ESC. That is to send commands from FC to ESC (such as Motor Commands) and information signals from ESC to FC (such as Battery Voltage).</p>
+<p>iii. Then, you should set ESC/Motor Protocol to DSHOT600.</p>
+<p>iv. The value of Motor Poles depends on the number of magnets in each motor, our motors have 12 magnets each.</p>
+<p>v. You must configure your motors in the Motors section, such as setting up spacial configuration (here QuadX), motor indexing and spinning directions.</p>
+<h3 id="i-cli-tab">i. CLI Tab</h3>
+<p>The CLI is the command line dedicated to our FC configuration. To cope with Agilicious’s setup, we must import their recommended internal configurations to our FC. To do so, we paste the below commands in our CLI. We recommend saving your current configuration given in our <a href="https://github.com/RibhavOjha/babee_agilicious/blob/main/betaflight_config">Github</a> in <code>betaflight_config</code> file.</p>
+<h2 id="10mocap-setup">10.Mocap Setup</h2>
+<ul>
+<li>Open Motive App</li>
+<li>Make sure no marker are detected</li>
+<li>Click “Start Wanding”</li>
+<li>Do the physical calibration</li>
+<li>When done click “Calculate”</li>
+<li>And apply the result if “Excellent/Exceptional”</li>
+<li>Set up the ground (initial coordinate)</li>
+<li>Select the ground on Motive</li>
+<li>Click “Set ground plane”</li>
+<li>Click “Export”</li>
+<li>Go to “View” &gt; “Data Streaming Pane” &gt; “Streaming” &gt; “Show Advanced” (if not automatic)</li>
+<li>Set “Up Axis” to “Z Up”</li>
+<li>Enable “VRPN” transmission/streaming</li>
+<li>In “Streaming” &gt; “Local Interface” select an IP (whichever you want, this will be used as the server address later)</li>
+</ul>
+<h2 id="11-agilicious-installation">11. Agilicious Installation</h2>
+<p>First, we create two copies of the Agilicious repository. One should be for your
+local/base/host computer and the other will be on your SBC.
+Use the below commands to create/clone the clean copies on each computer:</p>
+<pre><code>mkdir catkin_ws/src
+cd catkin_ws/src
+git clone https://github.com/catkin/catkin_simple
+git clone https://github.com/ethz-asl/mav_comm.git
+git clone git@github.com:uzh-rpg/agilicious.git
+catkin build
+</code></pre>
+<h2 id="12demonstration">12.Demonstration</h2>
+<p>You should now be ready to run the below demonstration on the Tracking Arena.
+Please note that, in the demonstration, we refer to the BSC as Babee.
+Demonstration for Tracking Arena:</p>
+<h3 id="1-agilicious-codebase-configuration">1. Agilicious codebase configuration:</h3>
+<ul>
+<li>
+<p>On Babee:</p>
+</li>
+<li>
+<p>In onboard_pilot_betaflight.yaml change quadrotor to kingfisher, if not by default.</p>
+</li>
+<li>In the file responsible for sending commands from NX-&gt;FC (here, sbus.yaml),
+    change the TTY address to the one of the TX pin of the SBC (here, /dev/ttyUSB0).</li>
+<li>
+<p>In the file responsible for receiving telemetry data from FC-&gt;NX (here,
+    betaflight.launch), change the TTY address to the one of the RX pin of the SBC
+    (here, /dev/ttyTHS0).</p>
+</li>
+<li>
+<p>On Base Computer:</p>
+</li>
+<li>In arena_basecomputer_onboard.launch change the server address to the one of
+    your Mocap system (for us, 10.206.0.244).
+    By default, this will be: <code>&lt;param name="server" value="192.168.200.119"/&gt;.</code></li>
+</ul>
+<h3 id="2-setup-before-launching">2. Setup before Launching:</h3>
+<p>Before starting this setup, you must decide on which, Base Computer (BC) or Babee,
+you wish to set as your MASTER. This doesn’t matter and can be either. We use BC.</p>
+<ul>
+<li>On Base Computer: Run the following commands in your BC terminal:</li>
+</ul>
+<pre><code>  cd catkin_ws/src/agilicious_internal/agiros/agiros/launch/tracking_arena
+  source /opt/ros/noetic/setup.bash
+  source ~/catkin_ws/devel/setup.bash
+  export ROS_MASTER_URI=http://&lt;MASTER_IP&gt;:11311
+  export ROS_IP=&lt;BC_IP&gt;
+</code></pre>
+<ul>
+<li>On Babee: Run the following commands in your Babee terminal:</li>
+</ul>
+<pre><code>ssh@&lt;Babee_IP&gt;
+source /opt/ros/noetic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+export ROS_MASTER_URI=http://&lt;MASTER_IP&gt;:11311
+export ROS_IP=&lt;Babee_IP&gt;
+sudo systemctl stop serial-getty@ttyTHS0.service serial-getty@ttyUSB0.service
+sudo chmod a+rw /dev/ttyTHS* /dev/ttyUSB*
+sudo usermod -a -G dialout $USER
+</code></pre>
+<h3 id="3-launching">3. Launching:</h3>
+<ul>
+<li>
+<p>On Base Computer: launch the following file to start autonomous flying: <code>roslaunch arena_base_computer_onboard.launch quad_name:=”kingfisher”</code></p>
+</li>
+<li>
+<p>This file will run 3 nodes:</p>
+<ol>
+<li>A GUI (to Connect, Arm and Hover) - This GUI is an alternative to RC.</li>
+<li>A VRPN Client (vrpn_client_ros) to get odometry data from the mocap.</li>
+<li>A Rviz instance to visualize everything.</li>
+</ol>
+</li>
+<li>
+<p>On Babee: launch the following file to start Autonomous flying: <code>roslaunch arena_quadrotor_onboard_betaflight.launch quad_name:='kingfisher'</code></p>
+</li>
+<li>
+<p>This file will run 2 nodes:</p>
+<ol>
+<li>A Mavros (betaflight) instance.</li>
+<li>A Controller - which is either an MPC or PID, based on what is set in your
+   configuration file in Agilicious codebase. By default Tracking Arena uses MPC.
+   c. On the GUI (from Base Computer):</li>
+</ol>
+</li>
+<li>
+<p>If everything has been set up properly, when pressing Connect you should now see
+  the Battery Voltage (indicating that FC-to-NX communication is working) and
+  Odometry Data (indicating that data was successfully read from the Mocap system).
+  Note that the Battery Voltage is now coming from the real hardware, so you must
+  make sure that this value is correct (tips: if it is 15.5V, the telemetry communication
+  probably failed).</p>
+</li>
+<li>When clicking Arm motors should now be rotating (indicating that NX-to-FC
+  communication is also working).</li>
+<li>When clicking Start, the motors should start spinning rapidly.
+  <strong>Important: Make sure that the Stop button works before using the quadrotor with
+  propellers on for safety reasons.</strong></li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-05-25 10:23:40.767714+00:00
+-->
